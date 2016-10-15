@@ -10,9 +10,7 @@
 
 #sudo apt-get remove onboard deja-dup
 
-sudo apt-get install -y vim
-
-sudo echo "deb http://archive.ubuntukylin.com:10006/ubuntukylin trusty main"  | sudo tee /etc/apt/sources.list.d/ubuntukylin.list
+#sudo echo "deb http://archive.ubuntukylin.com:10006/ubuntukylin trusty main"  | sudo tee /etc/apt/sources.list.d/ubuntukylin.list
 sudo cp /etc/apt/sources.list /etc/apt/sources.list.back
 sudo sed -i "s/us.archive.ubuntu.com/mirrors.aliyun.com/g" /etc/apt/sources.list
 sudo sed -i "s/security.ubuntu.com/mirrors.aliyun.com/g" /etc/apt/sources.list
@@ -31,6 +29,8 @@ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EA312927
 echo "deb http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.2.list
 
 sudo apt-get update
+
+sudo apt-get install -y vim
 
 #3.2
 sudo apt-get install -y mongodb-org=3.2.10 mongodb-org-server=3.2.10 mongodb-org-shell=3.2.10 mongodb-org-mongos=3.2.10 mongodb-org-tools=3.2.10
